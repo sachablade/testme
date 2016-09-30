@@ -1,0 +1,33 @@
+{
+	"program": "NewPCT",
+	"threads": 10,
+	"Tasks": [
+		{
+			"TaskName": "Task1",
+			"Level": 0,
+			"ClassName": "com.sachablade.example.EnlacesObtener",
+			"method":{
+				"name":"ObtenerEnlacesInit",
+				"parameters":["asd",2,true],
+				"input":[],
+				"output":{
+					"type":"List",
+					"refferTo":"Task2"
+				}
+			}			
+		},
+		{
+			"TaskName": "Task2",
+			"Level": 1,
+			"ClassName": "com.sachablade.example.EnlacesObtener",
+			"method":{
+				"name":"ObtenerEnlacesInit",
+				"input":[],
+				"output":{
+					"type":"List",
+					"refferTo":"Task2"
+				}
+			}			
+		}
+	]
+}
